@@ -1,40 +1,47 @@
 package com.java.sgc.model;
 
-import com.java.sgc.model.Convidado;
+import com.java.sgc.model.Participante;
 
-public class Estoque {
-    
-private String carne;
+import java.util.ArrayList;
 
-private String bebida;
-private String itemGeral;
+public class Estoque  extends Participante {
+    String itens;
+   
+   public Estoque(String nome, String itens){
+       super();
+       this.itens = itens;
+       }
 
+   public String getItens() {
+    return itens;
+   }
 
-public Estoque(String carne, String bebida, String itemGeral){
-    this.carne = carne;
-    this.bebida = bebida;
-    this.itemGeral = itemGeral;
-}
+   public void setItens(String itens) {
+    this.itens = itens;
+   }
 
+   @Override
+   public int hashCode() {
+    final int prime = 31;
+    int result = super.hashCode();
+    result = prime * result + ((itens == null) ? 0 : itens.hashCode());
+    return result;
+   }
 
-public String getCarne() {
-    return carne;
-}
-public void setCarne(String carne) {
-    this.carne = carne;
-}
-
-public String getBebida() {
-    return bebida;
-}
-public void setBebida(String bebida) {
-    this.bebida = bebida;
-}
-
-public String getItemGeral() {
-    return itemGeral;
-}
-public void setItemGeral(String itemGeral) {
-    this.itemGeral = itemGeral;
-}
-}
+   @Override
+   public boolean equals(Object obj) {
+    if (this == obj)
+        return true;
+    if (!super.equals(obj))
+        return false;
+    if (getClass() != obj.getClass())
+        return false;
+    Estoque other = (Estoque) obj;
+    if (itens == null) {
+        if (other.itens != null)
+            return false;
+    } else if (!itens.equals(other.itens))
+        return false;
+    return true;
+   }
+ }   
