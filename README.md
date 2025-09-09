@@ -34,6 +34,5 @@
 - **Classe Principal e Auxiliar de Controle**  
   - Executa o programa e organiza o fluxo entre os modelos.  
 
----
-## 📌 Observações
-O projeto foi desenvolvido com foco didático para reforçar os conceitos de **Programação Orientada a Objetos**, não sendo um sistema completo de gestão, mas uma base sólida para estudos e evolução futura.
+
+
